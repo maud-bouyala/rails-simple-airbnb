@@ -1,0 +1,15 @@
+<h2><%= @flat.name %></h2>
+<p> <strong>Address :</strong> <%= @flat.address %></p>
+<p> <strong>Description :</strong> <%= @flat.description %></p>
+<p> <strong>Price per night :</strong> <%= @flat.price_per_night %></p>
+<p> <strong>Number of guests :</strong> <%= @flat.number_of_guests %></p>
+
+
+
+<%= link_to "Delete",
+  flat_path(@flat),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
+
+<a href="/flats">Back to list</a>
+ <%= link_to "Edit", edit_flat_path(@flat)%>
